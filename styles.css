@@ -1,7 +1,7 @@
 /* ========================================
    Round Top Inn - Styles
-   Colors: Navy #0E182C, Tan #C19B77, Lavender #F6F6FF
-   Fonts: Playfair Display, Lato, Montserrat
+   Colors: Espresso #2E2824, Warm Gold #C19B77, Cream #FAF7F4
+   Fonts: Cormorant Garamond, Lato, Montserrat
    ======================================== */
 
 *, *::before, *::after {
@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #0E182C;
+  color: #2E2824;
   background: #fff;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -52,12 +52,12 @@ a {
 }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #0E182C;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #2E2824;
   margin-bottom: 24px;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .section-title.white {
@@ -74,11 +74,11 @@ a {
   display: inline-block;
   padding: 14px 36px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 2px;
   transition: all 0.3s ease;
   cursor: pointer;
   border: 2px solid transparent;
@@ -97,7 +97,7 @@ a {
 
 .btn-white {
   background: #fff;
-  color: #0E182C;
+  color: #2E2824;
   border-color: #fff;
 }
 
@@ -119,8 +119,8 @@ a {
 }
 
 .header.scrolled {
-  background: rgba(14, 24, 44, 0.95);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  background: rgba(46, 40, 36, 0.95);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
 
 .header-inner {
@@ -196,14 +196,14 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('/images/round-top-inn.jpg') center/cover no-repeat;
+  background: url('/images/hero-bedroom.jpg') center/cover no-repeat;
   color: #fff;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(14, 24, 44, 0.5);
+  background: rgba(46, 40, 36, 0.4);
 }
 
 .hero-content {
@@ -223,19 +223,20 @@ a {
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.15;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.1;
   margin-bottom: 16px;
+  letter-spacing: -0.5px;
 }
 
 .hero-tagline {
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.75);
   margin-bottom: 40px;
 }
 
@@ -254,14 +255,14 @@ a {
 }
 
 .about-image img {
-  border-radius: 4px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  border: 2px solid #0E182C;
+  border-radius: 2px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border: 1px solid #E0DAD4;
 }
 
 .about-text p {
   font-size: 16px;
-  color: #565A7C;
+  color: #6B6259;
   margin-bottom: 20px;
 }
 
@@ -273,7 +274,7 @@ a {
 
 .gallery {
   padding: 80px 0;
-  background: #F6F6FF;
+  background: #FAF7F4;
 }
 
 .gallery-grid {
@@ -285,8 +286,8 @@ a {
 
 .gallery-item {
   overflow: hidden;
-  border-radius: 4px;
-  border: 2px solid #0E182C;
+  border-radius: 2px;
+  border: 1px solid #E0DAD4;
   aspect-ratio: 4/3;
 }
 
@@ -316,10 +317,10 @@ a {
 }
 
 .testimonial-card {
-  background: #F6F6FF;
+  background: #FAF7F4;
   padding: 36px 28px;
-  border-radius: 4px;
-  border: 2px solid #e8e8f0;
+  border-radius: 2px;
+  border: 1px solid #E8E3DD;
   text-align: center;
 }
 
@@ -331,10 +332,10 @@ a {
 }
 
 .testimonial-text {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 15px;
-  color: #565A7C;
+  font-size: 17px;
+  color: #6B6259;
   line-height: 1.7;
   margin-bottom: 16px;
 }
@@ -352,7 +353,7 @@ a {
 
 .features {
   padding: 100px 0;
-  background: #0E182C;
+  background: #2E2824;
 }
 
 .features .section-label {
@@ -382,15 +383,16 @@ a {
 }
 
 .feature-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
   color: #fff;
   margin-bottom: 12px;
 }
 
 .feature-card p {
   font-size: 14px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.6);
   line-height: 1.7;
 }
 
@@ -398,7 +400,7 @@ a {
 
 .faq {
   padding: 100px 0;
-  background: #F6F6FF;
+  background: #FAF7F4;
 }
 
 .faq-list {
@@ -407,7 +409,7 @@ a {
 }
 
 .faq-item {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #E0DAD4;
 }
 
 .faq-question {
@@ -422,7 +424,7 @@ a {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #0E182C;
+  color: #2E2824;
   text-align: left;
 }
 
@@ -450,7 +452,7 @@ a {
 
 .faq-answer p {
   font-size: 15px;
-  color: #565A7C;
+  color: #6B6259;
   line-height: 1.7;
 }
 
@@ -467,7 +469,7 @@ a {
 .cta-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(14, 24, 44, 0.7);
+  background: rgba(46, 40, 36, 0.7);
 }
 
 .cta-content {
@@ -487,7 +489,7 @@ a {
 /* ---- Footer ---- */
 
 .footer {
-  background: #0E182C;
+  background: #2E2824;
   color: #fff;
   padding: 60px 0 40px;
   text-align: center;
@@ -500,7 +502,7 @@ a {
 
 .footer-text {
   font-size: 14px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 24px;
 }
 
@@ -517,7 +519,7 @@ a {
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.55);
   transition: color 0.3s ease;
 }
 
@@ -527,7 +529,7 @@ a {
 
 .footer-copy {
   font-size: 13px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.3);
 }
 
 /* ---- Responsive ---- */
@@ -554,11 +556,11 @@ a {
   }
 
   .hero-title {
-    font-size: 42px;
+    font-size: 48px;
   }
 
   .section-title {
-    font-size: 30px;
+    font-size: 34px;
   }
 }
 
@@ -569,7 +571,7 @@ a {
     right: -100%;
     width: 260px;
     height: 100vh;
-    background: #0E182C;
+    background: #2E2824;
     flex-direction: column;
     padding: 80px 32px 32px;
     gap: 24px;
@@ -587,7 +589,7 @@ a {
   }
 
   .hero-title {
-    font-size: 34px;
+    font-size: 38px;
   }
 
   .hero {
