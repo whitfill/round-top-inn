@@ -392,7 +392,7 @@ a {
 
 .feature-card p {
   font-size: 14px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.85);
   line-height: 1.7;
 }
 
@@ -469,7 +469,7 @@ a {
 .cta-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(46, 40, 36, 0.7);
+  background: rgba(46, 40, 36, 0.8);
 }
 
 .cta-content {
@@ -479,7 +479,7 @@ a {
 
 .cta-text {
   font-size: 18px;
-  color: rgba(255,255,255,0.85);
+  color: #fff;
   margin-bottom: 32px;
   max-width: 500px;
   margin-left: auto;
