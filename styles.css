@@ -396,6 +396,84 @@ a {
   line-height: 1.7;
 }
 
+/* ---- Explore Round Top ---- */
+
+.explore {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.explore-intro {
+  text-align: center;
+  font-size: 16px;
+  color: #6B6259;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.explore-card {
+  display: block;
+  background: #FAF7F4;
+  border: 1px solid #E8E3DD;
+  border-radius: 2px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.explore-card:hover {
+  border-color: #C19B77;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.explore-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.explore-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: #2E2824;
+  margin-bottom: 8px;
+}
+
+.explore-card p {
+  font-size: 14px;
+  color: #6B6259;
+  line-height: 1.6;
+}
+
+.explore-cta {
+  text-align: center;
+  font-size: 15px;
+  color: #6B6259;
+  margin-top: 12px;
+}
+
+.explore-cta a {
+  color: #C19B77;
+  font-weight: 700;
+  border-bottom: 1px solid #C19B77;
+  transition: color 0.3s ease;
+}
+
+.explore-cta a:hover {
+  color: #a8845f;
+  border-color: #a8845f;
+}
+
 /* ---- FAQ ---- */
 
 .faq {
@@ -454,6 +532,33 @@ a {
   font-size: 15px;
   color: #6B6259;
   line-height: 1.7;
+}
+
+.faq-answer a {
+  color: #C19B77;
+  font-weight: 700;
+  border-bottom: 1px solid #C19B77;
+  transition: color 0.3s ease;
+}
+
+.faq-answer a:hover {
+  color: #a8845f;
+  border-color: #a8845f;
+}
+
+.faq-group-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C19B77;
+  margin-top: 32px;
+  margin-bottom: 4px;
+}
+
+.faq-group-title:first-child {
+  margin-top: 0;
 }
 
 /* ---- CTA ---- */
@@ -555,6 +660,10 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .hero-title {
     font-size: 48px;
   }
@@ -606,7 +715,12 @@ a {
     gap: 16px;
   }
 
-  .about, .testimonials, .features, .faq {
+  .explore-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .about, .testimonials, .features, .faq, .explore {
     padding: 64px 0;
   }
 
