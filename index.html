@@ -146,24 +146,36 @@
       <p class="section-label center">Our Property</p>
       <h2 class="section-title center">Take a Tour</h2>
       <div class="gallery-grid">
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openLightbox(0)">
           <img src="/images/Main Roost int liv1.jpg" alt="Main Roost interior living area">
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openLightbox(1)">
           <img src="/images/Main Roost prim4.jpg" alt="Main Roost bedroom">
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openLightbox(2)">
           <img src="/images/Segar House Cigar Factory 1.jpg" alt="Segar House">
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openLightbox(3)">
           <img src="/images/Gate House 1d.jpg" alt="Gate House">
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openLightbox(4)">
           <img src="/images/our-segar-house-porch.jpg" alt="Segar House porch">
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openLightbox(5)">
           <img src="/images/front-porch-gathering.jpg" alt="Front porch gathering">
         </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)" aria-label="Previous">&#8249;</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)" aria-label="Next">&#8250;</button>
+        <div class="lightbox-img-wrap">
+          <img id="lightbox-img" src="" alt="">
+        </div>
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <p class="lightbox-counter" id="lightbox-counter"></p>
       </div>
     </div>
   </section>
@@ -477,6 +489,75 @@
         header.classList.remove('scrolled');
       }
     });
+
+    // Lightbox
+    const galleryImages = [
+      { src: '/images/Main Roost int liv1.jpg', alt: 'Main Roost interior living area' },
+      { src: '/images/Main Roost prim4.jpg', alt: 'Main Roost bedroom' },
+      { src: '/images/Segar House Cigar Factory 1.jpg', alt: 'Segar House' },
+      { src: '/images/Gate House 1d.jpg', alt: 'Gate House' },
+      { src: '/images/our-segar-house-porch.jpg', alt: 'Segar House porch' },
+      { src: '/images/front-porch-gathering.jpg', alt: 'Front porch gathering' },
+    ];
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navigateLightbox(dir) {
+      currentIndex = (currentIndex + dir + galleryImages.length) % galleryImages.length;
+      updateLightbox();
+    }
+
+    function updateLightbox() {
+      const img = galleryImages[currentIndex];
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-caption').textContent = img.alt;
+      document.getElementById('lightbox-counter').textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+    }
+
+    // Close on backdrop click
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this || e.target.classList.contains('lightbox-img-wrap')) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+
+    // Touch swipe support
+    (function() {
+      const lb = document.getElementById('lightbox');
+      let startX = 0;
+      let startY = 0;
+      lb.addEventListener('touchstart', function(e) {
+        startX = e.changedTouches[0].screenX;
+        startY = e.changedTouches[0].screenY;
+      }, { passive: true });
+      lb.addEventListener('touchend', function(e) {
+        const dx = e.changedTouches[0].screenX - startX;
+        const dy = e.changedTouches[0].screenY - startY;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+          navigateLightbox(dx < 0 ? 1 : -1);
+        }
+      }, { passive: true });
+    })();
   </script>
 
 </body>
