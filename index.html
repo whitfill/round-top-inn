@@ -24,7 +24,8 @@
     "name": "Round Top Inn",
     "description": "Luxury historic inn in downtown Round Top, Texas with thirteen restored guestrooms.",
     "url": "https://roundtopinn.com",
-    "telephone": "",
+    "telephone": "+1-979-378-8050",
+    "email": "info@roundtopinn.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Round Top",
@@ -355,13 +356,58 @@
     </div>
   </section>
 
-  <!-- Contact / CTA -->
-  <section class="cta" id="contact">
-    <div class="cta-overlay"></div>
-    <div class="container cta-content">
-      <h2 class="section-title center white">Ready to Experience Round Top?</h2>
-      <p class="cta-text">Book your stay at Round Top Inn and discover the charm of Texas hill country hospitality.</p>
-      <a href="https://resnexus.com/resnexus/reservations/book/D41FACD2-4DFD-43AE-897C-67137DDA9A3B" target="_blank" rel="noopener" class="btn btn-white">Book Your Stay</a>
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="section-label center">Get in Touch</p>
+      <h2 class="section-title center">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">&#9742;</span>
+            <div>
+              <h3>Call Us</h3>
+              <a href="tel:+19793788050">(979) 378-8050</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">&#9993;</span>
+            <div>
+              <h3>Email Us</h3>
+              <a href="mailto:info@roundtopinn.com">info@roundtopinn.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">&#9872;</span>
+            <div>
+              <h3>Visit Us</h3>
+              <p>Downtown Round Top, Texas</p>
+            </div>
+          </div>
+          <a href="https://resnexus.com/resnexus/reservations/book/D41FACD2-4DFD-43AE-897C-67137DDA9A3B" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 24px;">Book Your Stay</a>
+        </div>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden" style="display:none"><input name="bot-field"></p>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span style="font-weight:400; color:#999;">(optional)</span></label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -369,7 +415,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <img src="/images/rt inn.png" alt="Round Top Inn" class="footer-logo">
-      <p class="footer-text">Downtown Round Top, Texas</p>
+      <p class="footer-text">Downtown Round Top, Texas &nbsp;|&nbsp; <a href="tel:+19793788050" style="color: rgba(255,255,255,0.55);">(979) 378-8050</a> &nbsp;|&nbsp; <a href="mailto:info@roundtopinn.com" style="color: rgba(255,255,255,0.55);">info@roundtopinn.com</a></p>
       <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
